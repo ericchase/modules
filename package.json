@@ -1,0 +1,9 @@
+{
+  "name": "@ericchase/binary-tree",
+  "version": "1.0.0",
+  "description": "Implementation of the binary tree ADT",
+  "main": "binary-tree.js",
+  "author": "ericchase",
+  "license": "MIT",
+  "private": true
+}
