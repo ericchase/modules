@@ -1,13 +1,12 @@
 class EmptyNode {
-  hasLeftChild = function () { return false; }
-  getLeftChild = function () { return this; }
-  hasRightChild = function () { return false; }
-  getRightChild = function () { return this; }
-  getValue = function () { return undefined; }
+  hasLeftChild() { return false; }
+  getLeftChild() { return this; }
+  hasRightChild() { return false; }
+  getRightChild() { return this; }
+  getValue() { return undefined; }
 }
 
 class Node {
-  static emptyNode = new EmptyNode();
   constructor(value) {
     this[0] = Node.emptyNode;
     this[1] = Node.emptyNode;
@@ -46,9 +45,9 @@ class Node {
   }
 }
 
+Node.emptyNode = new EmptyNode();
+
 class BinaryTree {
-  static EmptyNode = EmptyNode;
-  static Node = Node;
   constructor(value_or_node) {
     this.root = Node.getNode(value_or_node);
   }
@@ -92,6 +91,9 @@ class BinaryTree {
     return this.root;
   }
 }
+
+BinaryTree.EmptyNode = EmptyNode;
+BinaryTree.Node = Node;
 
 exports.EmptyNode = EmptyNode;
 exports.Node = Node;
